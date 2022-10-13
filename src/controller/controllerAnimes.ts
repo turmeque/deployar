@@ -12,10 +12,11 @@ exports.getAllAnimes =async (req:Request,res:Response) => {
   
     try {
         
-       res.send("holaaaaaaaaa")
-   } catch (error) {
-        
-    }
+        const animesDB= await  db.Animes.findAll();
+        res.json({animesDB})
+  } catch (error) {
+       
+   }
     
 }
 
